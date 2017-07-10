@@ -4,7 +4,8 @@
  */
 package varianta.five.argumentscalculate;
 
-import varianta.five.argumentscalculate.action.Action;
+import varianta.five.argumentscalculate.action.MathFunction;
+import varianta.five.argumentscalculate.action.WorkInputOutputData;
 
 /**
  *
@@ -17,10 +18,11 @@ public class ArgumentsCalculation {
      */
     public static void main(String[] args) {
 
-        Action act=new Action();
-        if (act.CheckNumbers(args)==true) {
-            int calcSum =act.CalcSum(args);
-            int calcMult=act.CalcMultiplication(args);
+        WorkInputOutputData act=new WorkInputOutputData();
+        if (act.checkNumbers(args)==true) {
+            MathFunction function = new MathFunction(); 
+            int calcSum = function.calcSum(args);
+            int calcMult= function.calcMultiplication(args);
             System.out.println("Сумма аргументов равна " + String.valueOf(calcSum));
             System.out.println("Произведение аргументов равно " + String.valueOf(calcMult));
         }
